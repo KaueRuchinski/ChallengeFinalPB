@@ -21,21 +21,21 @@ Em seguida de acordo com seus SO, siga os comando que são instruidos a cada sis
 
 No caso do Windows você ira, e optar pelo Chocolatey, como será feito nessa sprint, siga as instruções abaixo.
 
-1. Entre no site da **[Chocolatey](https://chocolatey.org/install#individual)**
+1- Entre no site da **[Chocolatey](https://chocolatey.org/install#individual)**
 
-2. Clique na aba **INDIVIDUAL**
+2- Clique na aba **INDIVIDUAL**
 
     ![image](https://github.com/user-attachments/assets/b2813d2b-8276-4ed0-83f6-47a8bc63f0da)
 
 
-3. Copie o seguinte comando:
+3- Copie o seguinte comando:
     ```
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     ```
 
-4. Execute o Windows PowerShell como administrador
+4- Execute o Windows PowerShell como administrador
 
-5. Cole o comando 
+5- Cole o comando 
 
 No mesmo prompt, vá para o site do **[K6](https://k6.io/docs/get-started/installation/)**.
 
@@ -43,7 +43,7 @@ E rode o seguinte comando:
 ```
 choco install k6
 ```
-6. Para importar o meus códigos e usa-los no seu computador
+6- Para importar o meus códigos e usa-los no seu computador
  - Você pode tanto clonar:
 ```
 	git clone https://github.com/KaueRuchinski/EstagioUOL.git
@@ -57,12 +57,12 @@ choco install k6
     ```
   Dessa forma, voce irá rodar a API que iremos usar, localmente na sua máquina
   
-  1. Vá até a pasta onde está o arquivo
+  1- Vá até a pasta onde está o arquivo
 
-  2. Clique com o botão direito
+  2- Clique com o botão direito
 
-  3. Selecione a opção abri com VScode ou a IDE de sua preferencia
-  4. ![image](https://github.com/user-attachments/assets/17e93578-bfa7-4584-8ead-850f6676ac81)
+  3- Selecione a opção abri com VScode ou a IDE de sua preferencia
+  4- ![image](https://github.com/user-attachments/assets/17e93578-bfa7-4584-8ead-850f6676ac81)
 
   ##  Ao entrar na IDE e desejar rodar algum teste siga esses passos:
  
