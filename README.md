@@ -62,7 +62,8 @@ choco install k6
   2- Clique com o botão direito
 
   3- Selecione a opção abri com VScode ou a IDE de sua preferencia
-  4- ![image](https://github.com/user-attachments/assets/17e93578-bfa7-4584-8ead-850f6676ac81)
+  
+  ![image](https://github.com/user-attachments/assets/17e93578-bfa7-4584-8ead-850f6676ac81)
 
   ##  Ao entrar na IDE e desejar rodar algum teste siga esses passos:
  
