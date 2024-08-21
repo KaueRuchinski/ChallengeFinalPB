@@ -71,6 +71,7 @@ choco install k6
   2- Vá em Open Terminal.
 
   3- Clique na opção "Open in Integrated Terminal"
+  
   ![image](https://github.com/user-attachments/assets/f4695450-b614-4162-af61-46922f01302a)
 
 
