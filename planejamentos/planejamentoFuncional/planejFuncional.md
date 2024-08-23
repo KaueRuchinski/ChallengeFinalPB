@@ -15,25 +15,27 @@ Este teste está sendo feito para fins de conhecimento.
 
 > Movies:
 
-- 1º Teste criação de usuários(POST)
+- 1º Teste criação de filmes(POST)
 
-- 2º Teste busca/lista de usuários(GET)
+- 2º Teste busca/lista de filmes(GET)
 
-- 3º Teste de edição de usuários(PUT)
+- 3º Teste para buscar filme pelo ID(GET)
 
-- 4º Teste de Exclusão de usuários(DELETE)
+- 4º Teste de edição de filmes(PUT)
+
+- 5º Teste de Exclusão de filmes(DELETE)
 
 > Tickets:
 
-- 1º Teste para Cadastro de produtos(POST)
+- 1º Teste para Cadastro de Tickets(POST)
 
-- 2º Teste para a busca/listagem de produtos cadastrados(GET)
+- 2º Teste para a busca/listagem de Tickets cadastrados(GET)
 
-- 3º Teste para buscar produto pelo ID(GET)
+- 3º Teste para buscar tickets pelo ID(GET)
 
-- 4º Teste de edição do produto(PUT)
+- 4º Teste de edição dos Tickets(PUT)
 
-- 5º Teste para exclusão de produtos(DELETE)
+- 5º Teste para exclusão de Tickets(DELETE)
 
 
 ### 5.Local dos Testes
