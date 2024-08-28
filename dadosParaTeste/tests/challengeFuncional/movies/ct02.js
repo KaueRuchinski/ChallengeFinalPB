@@ -21,7 +21,7 @@ const payload =
   }
 
   export default function () {
-    const urlRes = baseRest.get(ENDPOINTS.MOVIES_ENDPOINT);
+    const urlRes = baseRest.post(ENDPOINTS.MOVIES_ENDPOINT);
 
     baseChecks.checkStatusCode(urlRes, 200);
     baseChecks.checkResTime(urlRes, 3500);

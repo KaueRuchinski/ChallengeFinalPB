@@ -117,19 +117,20 @@ Sera divulgado pelo github e pelo jira
 | CT10   | POST       | Administrador lança filme com campos vazios.                                                   | Status 400 Bad Request - Campos obrigatórios ausentes.         |
 | CT11   | POST       | Administrador lança filme com números em campos de texto.                                      | Status 400 Bad Request - Tipo de dado inválido.                |
 | CT12   | POST       | Administrador lança filme com dados repetidos.                                                 | Status 400 Bad Request - Duplicidade nos campos únicos.        |
-| CT13   | GET        | Consultar filme por ID existente.                                                              | Status 200 OK - Detalhes do filme retornados.                  |
-| CT14   | GET        | Consultar filme por ID inexistente.                                                            | Status 404 Not Found - Filme não encontrado.                   |
-| CT15   | PUT        | Administrador atualiza detalhes de um filme.                                                   | Status 200 OK - Detalhes atualizados retornados.               |
-| CT16   | PUT        | Usuário comum tenta atualizar detalhes de um filme.                                            | Status 403 Forbidden - Acesso negado.                          |
-| CT17   | PUT        | Administrador tenta atualizar filme com título vazio.                                          | Status 400 Bad Request - Campo obrigatório ausente.            |
-| CT18   | PUT        | Administrador tenta atualizar filme com todos os campos vazios.                                | Status 400 Bad Request - Campos obrigatórios ausentes.         |
-| CT19   | PUT        | Administrador tenta atualizar filme com dados numéricos em campos de texto.                    | Status 400 Bad Request - Tipo de dado inválido.                |
-| CT20   | PUT        | Administrador tenta atualizar filme sem launchdate.                                            | Status 400 Bad Request - Campo obrigatório ausente.            |
-| CT21   | PUT        | Administrador tenta atualizar filme sem showtime.                                              | Status 400 Bad Request - Campo obrigatório ausente.            |
-| CT22   | DELETE     | Administrador exclui filme com ID correto.                                                     | Status 204 No Content - Filme excluído com sucesso.            |
-| CT23   | DELETE     | Usuário comum tenta excluir filme.                                                             | Status 403 Forbidden - Acesso negado.                          |
-| CT24   | DELETE     | Administrador tenta excluir filme com ID incorreto.                                            | Status 404 Not Found - Filme não encontrado.                   |
-| CT25   | DELETE     | Administrador tenta excluir filme com tickets comprados.                                       | Status 400 Bad Request - Filme não pode ser excluído.          |
+| CT14   | GET        | Consultar filme por ID existente.                                                              | Status 200 OK - Detalhes do filme retornados.                  |
+| CT15   | GET        | Consultar filme por ID inexistente.                                                            | Status 404 Not Found - Filme não encontrado.                   |
+| CT18   | PUT        | Administrador atualiza detalhes de um filme.                                                   | Status 200 OK - Detalhes atualizados retornados.               |
+| CT19   | PUT        | Usuário comum tenta atualizar detalhes de um filme.                                            | Status 403 Forbidden - Acesso negado.                          |
+| CT20   | PUT        | Administrador tenta atualizar filme com título vazio.                                          | Status 400 Bad Request - Campo obrigatório ausente.            |
+| CT21   | PUT        | Administrador tenta atualizar filme com todos os campos vazios.                                | Status 400 Bad Request - Campos obrigatórios ausentes.         |
+| CT22   | PUT        | Administrador tenta atualizar filme com dados numéricos em campos de texto.                    | Status 400 Bad Request - Tipo de dado inválido.                |
+| CT23   | PUT        | Administrador tenta atualizar filme sem launchdate.                                            | Status 400 Bad Request - Campo obrigatório ausente.            |
+| CT24   | PUT        | Administrador tenta atualizar filme sem showtime.                                              | Status 400 Bad Request - Campo obrigatório ausente.            |
+| CT26   | DELETE     | Administrador exclui filme com ID correto.                                                     | Status 204 No Content - Filme excluído com sucesso.            |
+| CT27   | DELETE     | Usuário comum tenta excluir filme.                                                             | Status 403 Forbidden - Acesso negado.                          |
+| CT28   | DELETE     | Administrador tenta excluir filme com ID incorreto.                                            | Status 404 Not Found - Filme não encontrado.                   |
+| CT29   | DELETE     | Administrador tenta excluir filme com tickets comprados.                                       | Status 400 Bad Request - Filme não pode ser excluído.          |
+
 
 
 # /tickets

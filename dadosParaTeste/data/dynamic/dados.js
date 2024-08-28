@@ -9,18 +9,18 @@ export const moviesGenerate = () => ({
       "string"
     ]
 });
-export const userRandomGenerate = () => ({
+/*export const userRandomGenerate = () => ({
     "nome": faker.name.findName(),
     "email": faker.internet.email(),
     "password": faker.internet.password(10, true), 
     "administrador": faker.random.boolean().toString() 
-});
+});*/
 export const ticketsGenerate = () => ({
     "nome": faker.commerce.productName(),
     "preco": parseFloat(faker.commerce.price(10, 1000, 2, '')), 
     "descricao": faker.lorem.sentence(),  
     "quantidade": faker.random.number({ min: 1, max: 100 })
-});
+});// ALTERAR 
 
 export const ticketGenerate = () => ({
 "movieId": "string",

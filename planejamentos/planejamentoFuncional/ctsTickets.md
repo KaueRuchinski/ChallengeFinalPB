@@ -52,9 +52,6 @@
   - **Descrição**: Verificar a resposta do sistema ao tentar criar um filme com dados repetidos em campos onde não é permitido duplicação.
   - **Resposta Esperada**: `Status 400 - Requisição inválida`.
 
-- **CT12**: Verificar se a resposta ao criar um filme é correta.
-  - **Descrição**: Verificar se o sistema retorna `Status 201` e inclui o ID do filme na resposta.
-  - **Resposta Esperada**: `Status 201 - Criado com sucesso, retorna o ID do filme`.
 
 ## **GET ID**: Consultar Filme por ID
 
@@ -114,6 +111,4 @@
   - **Descrição**: Verificar a resposta do sistema ao tentar excluir um filme que possui ingressos vinculados.
   - **Resposta Esperada**: `Status 400 - Requisição inválida, não pode excluir filme com ingressos vendidos`.
 
-- **CT26**: Verificar se a resposta ao excluir um filme é correta.
-  - **Descrição**: Verificar se o sistema retorna `Status 204` ao excluir um filme com sucesso.
-  - **Resposta Esperada**: `Status 204 - Deletado com sucesso`.
+
