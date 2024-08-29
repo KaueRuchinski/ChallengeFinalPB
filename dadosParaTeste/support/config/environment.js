@@ -6,12 +6,16 @@ export const testConfig = {
     },
     options:{
         smokeThreshold: {
-            vus: 1, 
-            duration: '1s', 
-            threshold: {
-                http_req_duration: ['(95)<2000'],
-                http_req_failed: ['rate<0.05']
-            }
+            teste: {
+                setupTimeout: '600s',
+                teardownTimeout: '600s',
+                vus: 1,
+                iterations: 1,
+                thresholds: {
+                    http_req_duration: ['(95)<2000'],
+                    http_req_failed: ['rate<0.05']
+                }
+              },   
           },
 
           spikeThreshold: {

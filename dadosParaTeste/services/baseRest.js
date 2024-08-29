@@ -18,11 +18,11 @@ export class BaseRest extends BaseService {
         return http.get(uri, options);
     }
 
-    /*del(endpoint, userId, headers = {}, params = {}) {
-        let uri = this.base_uri + endpoint + `/${userId}`;
+    del(endpoint, headers = {}, params = {}) {
+        let uri = this.base_uri + endpoint;
         let options = this.buildOptions(headers, params);
         return http.del(uri, options);
-    }*/
+    }
 
     buildOptions(headers = {}, params = {}) {
         return {
