@@ -14,7 +14,7 @@ Nesse challenge foi usada a API de cinema para a realização dos testes. Foram 
 
 ## Mapa mental
 
-![mapaMental](<API Cinema Final.png>)
+![mapaMental](<image-2.png>)
 
 # Abaixo segue o passo de instalação sobre o que será necessário para realizar o projeto.
 
