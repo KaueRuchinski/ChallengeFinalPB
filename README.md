@@ -72,7 +72,7 @@ npm run start
 11- Para importar o meus códigos e usa-los no seu computador
  - Você pode tanto clonar:
 ```
-	git clone https://github.com/KaueRuchinski/EstagioUOL.git
+	git clone https://github.com/KaueRuchinski/ChallengeFinalPB.git
 ```
 - Ou apenas baixar o arquivo em ZIP e extrai-lo
 
