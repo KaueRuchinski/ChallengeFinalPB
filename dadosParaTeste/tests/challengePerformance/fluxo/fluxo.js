@@ -1,18 +1,24 @@
-// CT25: Atualizar Filme com description Vazio
 import { ENDPOINTS, BaseChecks, BaseRest, testConfig } from '../../../support/base/baseTest.js';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
-export const options = testConfig.options.smokeThreshold;
+export const options = testConfig.options.scalabilityTresholdsMovies;
 
 const base_uri = testConfig.environment.hml.url;
 const baseRest = new BaseRest(base_uri);
 const baseChecks = new BaseChecks();
+
+export function handleSummary(data) {
+    return {
+        "resultadoFluxoMovies.html": htmlReport(data),
+    };
+}
 
 const moviePayload = {
     "title": "Filme para Atualizar",
     "description": "Descrição inicial",
     "launchdate": "2024-08-28T12:00:00.000Z",
     "showtimes": [
-        ""
+        "20:00"
     ]
 };
 
@@ -45,7 +51,7 @@ export default function (data) {
         "description": "Descrição atualizada",
         "launchdate": "2024-08-29T15:00:00.000Z",
         "showtimes": [
-            ""
+            "22:00"
         ]
     };
 

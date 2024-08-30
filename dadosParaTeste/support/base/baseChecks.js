@@ -1,11 +1,11 @@
 import { check } from "k6";
 
 export class BaseChecks {
-    checkStatusCode(response, expectedStatus = 200) {
-        check( response, {
-            'status code check': (r) => r.status === expectedStatus
-        })
-    }
+  checkStatusCode(response, expectedStatus = 200) {
+    check( response, {
+        [`status code is ${expectedStatus}`]: (r) => r.status === expectedStatus,
+    });
+}
     checkRes(response, expectedStatus = 'Cadastro realizado com sucesso'){
       check( response, {
         'create user message is correct': (r) => r.message === expectedStatus
