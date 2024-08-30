@@ -2,6 +2,8 @@
 
 # Bem vindo, esse é o readme do Challenge Final(Sprint 8)
 
+Olá me chamo Kauê Humenhuk Ruchinski, sou de Mafra-SC, tenho 19 anos, olhos castanhos, cabelos loiros, pele branca,  tipo roupa que está utilizando e sua cor, faço Eng. de Software no campus UNC de Mafra, atualmente estou na 4º fase ou 8º semestre.
+
 ## Conteúdos abordados:
 
 - Docker
@@ -9,7 +11,8 @@
 - Execução de testes no EC2
 - Implementação do Challenge final
 
-Olá me chamo Kauê Humenhuk Ruchinski, sou de Mafra , tenho 19 anos, olhos castanhos, cabelos loiros, pele branca,  tipo roupa que está utilizando e sua cor), faço Eng. de Software na UNC de Mafra, atualmente(21/08/2024) estou na 4º fase ou 8º semestre.
+# O que foi feito
+Nesse challenge foi usada a API de cinema para a realização dos testes. Foram feitos os planejamentos tanto funcionais quanto de performance, matriz de rastreabilidade, mapa mental , user stories, os testes funcionais e não funcionais e por fim os fluxos.
 
 # Abaixo segue o passo de instalação sobre o que será necessário para realizar o projeto.
 
@@ -43,7 +46,30 @@ E rode o seguinte comando:
 ```
 choco install k6
 ```
-6- Para importar o meus códigos e usa-los no seu computador
+
+6- Importe a API Cinema pelo git clone
+```
+https://github.com/juniorschmitz/nestjs-cinema.git
+```
+7- Abra o arquivo ```netjs-cinema-main```
+
+![alt text](image.png)
+
+8- Clique em ```Open Git Bash Here```
+
+![alt text](image-1.png)
+
+9- Dentro do Git Bash rodar:
+```
+npm install
+```
+
+10 - Para rodar a aplicação, executar o comando:
+```
+npm run start
+```
+
+11- Para importar o meus códigos e usa-los no seu computador
  - Você pode tanto clonar:
 ```
 	git clone https://github.com/KaueRuchinski/EstagioUOL.git
@@ -86,6 +112,40 @@ choco install k6
       
 ## Objetivos dos Testes:
 
-Avaliar o nivel de performance da API
+Avaliar o nivel de performance da API,se está funcionando de forma correta e estavel.
 
-### Segue os links para os dias,Planejamento e para Baixar o JMeter:
+### Segue os links para o Mapa mental, Planejamentos e para o Jira:
+
+
+- **[Mapa mental]()**
+
+- **[User Stories Movies](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/37e4f4e34b0108240c7a74003f80950063c66255/userStories/gerenciamentoDeFilmes.md)**
+
+- **[User Stories Tickets](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/37e4f4e34b0108240c7a74003f80950063c66255/userStories/reservaDeIngressos.md)**
+
+- **[Planejamento Funcional](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/37e4f4e34b0108240c7a74003f80950063c66255/planejamentos/planejamentoFuncional/planejFuncional.md)**
+
+- **[CTs Movies](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/37e4f4e34b0108240c7a74003f80950063c66255/planejamentos/planejamentoFuncional/ctsMovies.md)**
+
+- **[CTS Tickets](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/37e4f4e34b0108240c7a74003f80950063c66255/planejamentos/planejamentoFuncional/ctsTickets.md)**
+
+- **[Planejamento performance Movies](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/37e4f4e34b0108240c7a74003f80950063c66255/planejamentos/planejamentoDePerformance/planejPerMovies.md)**
+
+- **[Planejamento performance Tickets](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/37e4f4e34b0108240c7a74003f80950063c66255/planejamentos/planejamentoDePerformance/planejPerTickets.md)**
+
+
+### Agradecimentos:
+
+Enzo Rossi,Leticia Ribeiro, Mathias , Jorge, Gabriel Just, Oliver
+
+### Autor
+
+    Kauê Humenhuk Ruchinski
+
+### Ajuda
+
+Foram usadas como uma forma de ajuda e de correção o Chatgpt
+
+## Obrigado por esses meses de PB e todo carinho
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/TghvGQT/manly-handshake-fma-brotherhood.gif" alt="manly-handshake-fma-brotherhood" border="0"></a>

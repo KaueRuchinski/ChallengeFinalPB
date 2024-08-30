@@ -9,7 +9,7 @@ const baseChecks = new BaseChecks();
 
 const moviePayload = {
     "title": "É O SHADOW",
-    "description": "O ",
+    "description": "SHADOW, eu s... ",
     "launchdate": "2024-08-27T20:07:17.133Z",
     "showtimes": [
       "19:00", "23:00"

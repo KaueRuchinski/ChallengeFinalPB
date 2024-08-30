@@ -62,9 +62,9 @@ Na minha máquina, segue as configurações:
 
 ### 7.Critérios Usados
 
-Serão feitos um total de ? testes e ? Casos.
+Serão feitos um total de 10 testes e 39 Casos.
 
-Serão avaliados pelo status , se esta correto com o que se pede, e seu response
+Serão avaliados pelo status , se esta correto com o que se pede, e seu response.
 
 ### 8.Riscos
 
@@ -78,7 +78,7 @@ Serão avaliados pelo status , se esta correto com o que se pede, e seu response
 
 Sera divulgado pelo github e pelo jira 
 
-## US 004: [API] Carrinho
+## [API] Cinema
 
         DoR:
 

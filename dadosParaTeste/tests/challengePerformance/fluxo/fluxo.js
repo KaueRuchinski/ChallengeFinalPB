@@ -1,11 +1,26 @@
 import { ENDPOINTS, BaseChecks, BaseRest, testConfig } from '../../../support/base/baseTest.js';
-import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+import { htmlReport } from 'https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js';
 
-export const options = testConfig.options.scalabilityTresholdsMovies;
+// Configuração das opções para o teste de smoke
+export const options = testConfig.options.smokeTresholdsMovies;
+
 
 const base_uri = testConfig.environment.hml.url;
+// Criação de instâncias para realizar requisições HTTP e verificações de resposta
 const baseRest = new BaseRest(base_uri);
 const baseChecks = new BaseChecks();
+
+// Função responsável por gerar os dados do filme a ser criado. 
+function generateMovieData() {
+    return {
+        title: "Exemplo de Filme",
+        description: "Descrição do Filme",
+        releaseDate: "2024-09-01T00:00:00Z",
+        genre: "Ação",
+        director: "Diretor Exemplo"
+    };
+}
+
 
 export function handleSummary(data) {
     return {
@@ -13,65 +28,57 @@ export function handleSummary(data) {
     };
 }
 
-const moviePayload = {
-    "title": "Filme para Atualizar",
-    "description": "Descrição inicial",
-    "launchdate": "2024-08-28T12:00:00.000Z",
-    "showtimes": [
-        "20:00"
-    ]
-};
+// Geração dos dados do filme e inicialização da variável que armazenará o ID do filme criado
+const movieData = generateMovieData();
+let movieId = null;
 
-export function setup() {
-    // Cria o filme para ser atualizado
-    const res = baseRest.post(ENDPOINTS.MOVIES_ENDPOINT, moviePayload);
-    baseChecks.checkStatusCode(res, 201);
-
-    // Verifica se a resposta é um JSON válido
-    let movieData;
-    try {
-        movieData = res.json();
-    } catch (error) {
-        throw new Error("Resposta inválida ou não é um JSON: " + res.body);
-    }
-
-    if (!movieData || !movieData._id) {
-        throw new Error("Falha na criação do filme ou ID não retornado");
-    }
-
-    return { movieId: movieData._id };
-}
-
-export default function (data) {
-    const movieId = data.movieId;
-
-    // Atualiza os detalhes do filme
-    const updatePayload = {
-        "title": "Filme Atualizado",
-        "description": "Descrição atualizada",
-        "launchdate": "2024-08-29T15:00:00.000Z",
-        "showtimes": [
-            "22:00"
-        ]
-    };
-
-    const urlRes = baseRest.put(`${ENDPOINTS.MOVIES_ENDPOINT}/${movieId}`, updatePayload);
+export default () => {
+    // Realiza a requisição POST para criar um filme 
+    const resPost = baseRest.post(ENDPOINTS.MOVIES_ENDPOINT, movieData);
     
-    // Verifica se a resposta é um JSON válido
-    let responseBody;
-    try {
-        responseBody = urlRes.json();
-    } catch (error) {
-        console.log("Resposta inválida ou não é um JSON: " + urlRes.body);
-        return; // Interrompe a execução se a resposta não for válida
-    }
+    baseChecks.checkStatusCode(resPost, 201);
 
-    if (urlRes.status === 200) {
-        console.log("Filme atualizado com sucesso:", responseBody);
+    // Realiza uma requisição GET para obter a lista de filmes
+    const resGet = baseRest.get(ENDPOINTS.MOVIES_ENDPOINT);
+    
+    baseChecks.checkStatusCode(resGet, 200);
+
+    // Processa a resposta do GET para buscar o filme criado anteriormente
+    const movies = resGet.json();
+    if (Array.isArray(movies)) {
+        // Encontra o filme na lista de filmes retornados que tem o mesmo título e descrição que o filme criado
+        const movie = movies.find(m => m.title === movieData.title && m.description === movieData.description);
+        if (movie) {
+            // Se o filme for encontrado, armazena o ID do filme para uso posterior
+            movieId = movie._id;
+            console.log(`ID do filme capturado: ${movieId}`);
+        } else {
+            // Exibe um erro no console se o filme não for encontrado
+            console.error('Filme com os dados especificados não foi encontrado.');
+        }
     } else {
-        console.log("Falha na atualização:", urlRes.status, responseBody);
+        // Exibe um erro no console se a resposta da API tiver um formato inesperado
+        console.error('Formato inesperado na resposta da API.');
     }
 
-    baseChecks.checkStatusCode(urlRes, 200);
-    baseChecks.checkResTime(urlRes, 3500);
+    if (movieId) {
+        // Gera os dados do ticket utilizando o ID do filme capturado
+        const ticketData = {
+            movieId: movieId,
+            userId: "FSJnsJHWMgcSÇ",
+            seatNumber: 16,
+            price: 30,
+            showtime: "2024-08-28T17:55:10.241Z"
+        };
+
+        // Exibe no console os dados que serão enviados na requisição para criar o ticket
+        console.log(`Enviando os seguintes dados para a criação do ticket: ${JSON.stringify(ticketData)}`);
+        // Realiza a requisição POST para criar o ticket
+        const resTicketPost = baseRest.post(ENDPOINTS.TICKETS_ENDPOINT, ticketData);
+        // Verifica se a resposta do POST tem o status code 201 (Created)
+        baseChecks.checkStatusCode(resTicketPost, 201);
+    } else {
+        // Exibe um erro no console se o ID do filme não foi capturado, impedindo a criação do ticket
+        console.error('Não foi possível criar o ticket porque o ID do filme não foi capturado.');
+    }
 }
