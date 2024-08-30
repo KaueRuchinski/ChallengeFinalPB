@@ -77,7 +77,7 @@ export const testConfig = {
     options: {
         smokeTresholds: {
             vus: 1, 
-            duration: '1s',
+            duration: '20s',
             thresholds: {
                 http_req_duration: ['p(95)<2000'],
                 http_req_failed: ['rate<0.05']

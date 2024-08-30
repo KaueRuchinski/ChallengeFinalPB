@@ -2,8 +2,6 @@
 
 # Bem vindo, esse é o readme do Challenge Final(Sprint 8)
 
-Olá me chamo Kauê Humenhuk Ruchinski, sou de Mafra-SC, tenho 19 anos, olhos castanhos, cabelos loiros, pele branca,  estou usando uma camiseta vermelha . bermuda preta, faço Eng. de Software no campus UNC de Mafra, atualmente estou na 4º fase ou 4º semestre.
-
 ## Conteúdos abordados:
 
 - Docker
