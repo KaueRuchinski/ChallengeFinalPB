@@ -12,6 +12,10 @@
 # O que foi feito
 Nesse challenge foi usada a API de cinema para a realização dos testes. Foram feitos os planejamentos tanto funcionais quanto de performance, matriz de rastreabilidade, mapa mental , user stories, os testes funcionais e não funcionais e por fim os fluxos.
 
+## Mapa mental
+
+![mapaMental](<API Cinema Final.png>)
+
 # Abaixo segue o passo de instalação sobre o que será necessário para realizar o projeto.
 
 ## Instalação(K6 e Chocolatey)
