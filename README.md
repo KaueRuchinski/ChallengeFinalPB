@@ -115,7 +115,7 @@ Avaliar o nivel de performance da API,se está funcionando de forma correta e es
 ### Segue os links para o Mapa mental, Planejamentos e para o Jira:
 
 
-- **[Mapa mental]()**
+- **[Mapa mental](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/e3ba187bec4e1a16582f8501710e126868ea6c9d/mapaMental/API%20Cinema%20Final.png)**
 
 - **[User Stories Movies](https://github.com/KaueRuchinski/ChallengeFinalPB/blob/37e4f4e34b0108240c7a74003f80950063c66255/userStories/gerenciamentoDeFilmes.md)**
 
