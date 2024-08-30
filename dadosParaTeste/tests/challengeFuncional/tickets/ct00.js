@@ -1,7 +1,5 @@
-//CT01: Consultar Lista de Filmes
+//CT00: Usuário consulta lista de filmes.
 import { sleep } from 'k6';
-import http from 'k6/http';
-import { SharedArray } from 'k6/data';
 
 import { ENDPOINTS, BaseChecks, BaseRest, testConfig } from '../../../support/base/baseTest.js';
 
@@ -12,7 +10,7 @@ const baseRest = new BaseRest(base_uri);
 const baseChecks =  new BaseChecks();
 
   export default function () {
-    const urlRes = baseRest.get(ENDPOINTS.MOVIES_ENDPOINT,);
+    const urlRes = baseRest.get(ENDPOINTS.TICKETS_ENDPOINT,);
 
     baseChecks.checkStatusCode(urlRes, 200);
     baseChecks.checkResTime(urlRes, 3500);
