@@ -52,9 +52,6 @@
 **Descrição:** O administrador tenta criar um filme com dados duplicados em campos únicos.
 **Resposta Esperada:** Retornar status 400 Bad Request com mensagem de erro de duplicidade.
 
-### CT13: Resposta Deve Retornar 201 com ID Incluído
-**Descrição:** Ao criar um novo filme, a resposta deve incluir o status 201 Created e o ID do filme.
-**Resposta Esperada:** Retornar status 201 Created com o ID do novo filme.
 
 ## GET /movies/{id}
 
@@ -64,14 +61,6 @@
 
 ### CT15: Consultar Filme por ID Inexistente
 **Descrição:** O usuário tenta consultar um filme que não existe pelo ID.
-**Resposta Esperada:** Retornar status 404 Not Found.
-
-### CT16: Resposta Deve Retornar Todos os Detalhes
-**Descrição:** A resposta para uma consulta por ID existente deve retornar todos os detalhes do filme.
-**Resposta Esperada:** Retornar status 200 OK com os detalhes completos do filme.
-
-### CT17: Resposta Deve Retornar Erro 404
-**Descrição:** Ao tentar consultar um ID inexistente, a resposta deve retornar status 404 Not Found.
 **Resposta Esperada:** Retornar status 404 Not Found.
 
 ## PUT /movies/{id}

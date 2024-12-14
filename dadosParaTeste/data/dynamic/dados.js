@@ -9,23 +9,12 @@ export const moviesGenerate = () => ({
       "string"
     ]
 });
-export const userRandomGenerate = () => ({
-    "nome": faker.name.findName(),
-    "email": faker.internet.email(),
-    "password": faker.internet.password(10, true), 
-    "administrador": faker.random.boolean().toString() 
-});
-export const ticketsGenerate = () => ({
-    "nome": faker.commerce.productName(),
-    "preco": parseFloat(faker.commerce.price(10, 1000, 2, '')), 
-    "descricao": faker.lorem.sentence(),  
-    "quantidade": faker.random.number({ min: 1, max: 100 })
-});
-
-export const ticketGenerate = () => ({
-"movieId": "string",
-  "userId": "string",
-  "seatNumber": 0,
-  "price": 0,
-  "showtime": "2024-08-27T20:11:00.501Z"
-});
+export const generateTicketData = () => {
+  return {
+      movieId: Faker.finance.bitcoinAddress(),
+      userId: Faker.finance.bitcoinAddress(),
+      seatNumber: 0,
+      price: 30,
+      showtime: "2024-08-28T17:55:10.241Z"
+  };
+};S

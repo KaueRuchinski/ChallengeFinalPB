@@ -1,1 +1,1 @@
-[mapaMental]![alt text](image.png)
+![mapaMental](<API Cinema Final.png>)
